@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <!--CHANDAN -->
+
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "plugin/styles_home.css" %}">
+
+    <!-- for login form-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- for tagline animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+  
+       {% comment %} <a href = "codechef_management_app/register">Register</a>
+    <a href = "codechef_management_app/login">Login</a> {% endcomment %}
+
+
+
+
+
+
+
+{% comment %} 
+    <div class="login-reg-panel">
+      <div class="login-info-box">
+        <h2>Have an account?</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <label id="label-register" for="log-reg-show">Login</label>
+        <input
+          type="radio"
+          name="active-log-panel"
+          id="log-reg-show"
+          checked="checked"
+        />
+      </div>
+
+      <div class="register-info-box">
+        <h2>Don't have an account?</h2>
+        <p>Lorem ipsum dolor sit amet</p>
+        <label id="label-login" for="log-login-show">Register</label>
+        <input type="radio" name="active-log-panel" id="log-login-show" />
+      </div>
+
+      <div class="white-panel">
+        <div class="login-show">
+          <h2>LOGIN</h2>
+          <input type="text" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="button" value="Login" />
+          <a href="">Forgot password?</a>
+        </div>
+        <div class="register-show">
+          <h2>REGISTER</h2>
+          <input type="text" placeholder="First Name" required/>
+          <input type="text" placeholder="Last Name" required/>
+          <input type="text" placeholder="Email" required/>
+          <input type="text" placeholder="Codecchef_id" required/>
+          <input type="text" placeholder="Prn_no" required/>
+          <input type="password" placeholder="Password" required/>
+          <input type="password" placeholder="Confirm Password" required/>
+          <input type="button" value="Register" />
+
+        </div>
+      </div>
+    </div>
+
+        <script src="{% static "plugin/js.js"%}"></script>
+
+  </body>
+</html> {% endcomment %}
+
+
+
+    <div class="container">
+        <div class="fronttext">
+            <h1 class="name">CodeChef DYPIU Chapter</h1>
+            <h3 class="ml3">Powered by Data Structures and Algorithms</h3>
+            <center><h3 class="tologin">˅</h3></center>
+        </div>
+        
+        <div class="login-reg-panel">
+            <div class="login-info-box">
+                <h2 style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 35px;" >Have an account?</h2>
+                <label id="label-register" for="log-reg-show" style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 25px;">Login</label>
+                <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+            </div>
+
+            <div class="register-info-box">
+                <h2 style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 35px;">Don't have an account?</h2>
+                <label id="label-login" for="log-login-show" style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 25px;">Register</label>
+                <input type="radio" name="active-log-panel" id="log-login-show">
+            </div>
+
+            <div class="white-panel">
+                <div class="login-show">
+                    <h2 style="color: black; font-family: 'Roboto', sans-serif; font-size: 45px;">Login</h2>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="button" value="Login" style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 18px;">
+                </div>
+
+                <div class="register-show">
+                    <h2 style="color: black; font-family: 'Roboto', sans-serif; font-size: 45px;">Register</h2>
+                    <input type="text" name="first_name" placeholder="First Name">
+                    <input type="text" name="last_name" placeholder="Last Name">
+                    <input type="text" name="codechef_id" placeholder="Codechef Username">
+                    <input type="text" name="prn" placeholder="PRN">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password1" placeholder="Password">
+                    <input type="password" name="password2" placeholder="Confirm Password">
+
+
+                    {% if user.is_authenticated %}  
+                        <h2>Hello, {{user.first_name}}</h2>       
+                      <a href = "codechef_management_app/logout">Logout</a>             
+                    {% else %}      
+                        <a href = "codechef_management_app/register">Register</a>
+                        <a href = "codechef_management_app/login">Login</a>
+
+                    {% endif %}
+
+
+
+                    {% comment %} <input type="button" value="Register" style="color: #ffff; font-family: 'Roboto', sans-serif; font-size: 18px;"> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer" style="margin: 20px;">
+            <center>
+                <p style="font-family: 'Roboto', sans-serif; font-size: 13px; color: #797979;">©CodeChef DYPIU 2021</p>
+                <p style="font-family: 'Roboto', sans-serif; font-size: 13px; color: #797979;">All rights reserved</p>
+            </center>
+            
+        </div>
+    </div>
+    <script src="{% static "/plugin/animate.js" %}"></script>
+</body>
+</html>
