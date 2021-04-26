@@ -25,6 +25,7 @@
 
   <body>
   
+<<<<<<< HEAD
        {% comment %} <a href = "codechef_management_app/register">Register</a>
     <a href = "codechef_management_app/login">Login</a> {% endcomment %}
 
@@ -147,6 +148,24 @@
             </center>
             
         </div>
+=======
+    <div class="container">
+
+        <div class="fronttext">
+            <h1 class="name">CodeChef DYPIU Chapter</h1>
+            <h3 class="ml3">Powered by Data Structures and Algorithms</h3>
+        </div>
+                   {% if user.is_authenticated %}  
+                        <h2>Hello, {{user.first_name}}</h2>       
+                      <button><a class="example" href = "codechef_management_app/logout">Logout</a>        </button>     
+                    {% else %}      
+       
+                         <center><button><a class="example" href = "codechef_management_app/register"> Register </a> </button> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button><a class="example" href = "codechef_management_app/login"> Login </a></button>
+</center>
+                    {% endif %}
+
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)
     </div>
     <script src="{% static "/plugin/animate.js" %}"></script>
 </body>

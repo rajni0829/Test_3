@@ -10,7 +10,12 @@ body {
 
 .fronttext {
   width: 100%;
+<<<<<<< HEAD
   height: 100vh;
+=======
+  height: 30vh;
+  
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)
 }
 
 .tologin {
@@ -38,6 +43,7 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .login-reg-panel {
   transform: translateY(-50%);
   text-align: center;
@@ -187,3 +193,28 @@ body {
   letter-spacing: 1px;
   z-index: 99;
 }
+=======
+/* a{
+  text-align:center;
+} */
+.example { text-align: center; }
+
+a:link {
+  color:green;
+}
+
+/* visited link */
+a:visited {
+  color:blue;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color:red;
+}
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)

@@ -26,6 +26,10 @@ urlpatterns = [
     path('codechef_management_app/register',views.register,name="register"),
     path('codechef_management_app/login',views.login,name="login"),
     path("codechef_management_app/logout",views.logout,name="logout"),
+<<<<<<< HEAD
+=======
+    path("codechef_management_app/events",views.events,name="events" ),
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)
 
 
     # path('templates/',include('codechef_management_app.urls'))

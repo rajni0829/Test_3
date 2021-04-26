@@ -126,7 +126,11 @@ def login(request):
         user = auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
+<<<<<<< HEAD
             return redirect("/")
+=======
+            return redirect("events")
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)
         else:
             messages.info(request,'Invalid Credentials')
             return redirect('login')
@@ -137,4 +141,13 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
+<<<<<<< HEAD
     return redirect("/")
+=======
+    return redirect("/")
+
+
+
+def events(request):
+    return render(request,"events.html")
+>>>>>>> 5163974 (Second commit-webpages liked...card removed.Event page added!)
